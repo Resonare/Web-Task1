@@ -49,9 +49,13 @@ body > section > div {
     display: inline-block;
     text-decoration: none;
     font-size: 1.15em;
-    color: hsla(0, 0%, 100%, .6);
+    color: hsla(0, 0%, 100%, 0.415);
     margin-right: auto;
     margin-left: auto;
+}
+
+.navigation-container > div:nth-child(2) > div:nth-child(1) > a {
+    color: white;
 }
 
 .navigation-container a.navigation-title { 
@@ -126,9 +130,6 @@ body > section > div {
 .articles-container > .most-profitable-container > h1 {
     font-size: 2em;
     margin-bottom: 1vh;
-}
-
-.articles-container > .most-profitable-container > div {
 }
 
 .articles-container > .most-profitable-container > div > div {
