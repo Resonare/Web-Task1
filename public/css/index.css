@@ -27,6 +27,7 @@ body > section > div {
     padding: 2vh 2vw;
     display: inline-block;
     margin: 0;
+    vertical-align: bottom;
 }
 
 .navigation-container > div:nth-child(1) {
@@ -39,14 +40,18 @@ body > section > div {
 }
 
 .navigation-container > div:nth-child(2) > div {
-    display: inline;
-}
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+  }
 
 .navigation-container a {
-    display: inline;
+    display: inline-block;
     text-decoration: none;
     font-size: 1.15em;
     color: hsla(0, 0%, 100%, .6);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .navigation-container a.navigation-title { 
