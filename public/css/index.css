@@ -24,24 +24,32 @@ body > section > div {
 /*NAVIGATION SECTION*/
 .navigation-container {
     display: flex;
-    align-items: flex-end;
-}
-
-.navigation-container > div {
-    background-color: #141414;
-    padding: 2vh 2vw;
-    display: flex;
+    flex-direction: column;
 }
 
 .navigation-container > div:nth-child(1) {
-    width: 30%;
+    justify-content: space-around;
+    background-color: black;
 }
 
-.navigation-container > div:nth-child(2) {
-    height: 30%;
-    flex-grow: 1;
+.navigation-container > div:nth-child(1) > div {
+    width: 60%;
+}
+
+.navigation-container > div:nth-child(1) > div > input {
+    width: 95%;
+}
+
+
+.navigation-container > div {
     display: flex;
-    justify-content: space-evenly;
+    background-color: #141414;
+    padding: 2vh 2vw;
+}
+
+
+.navigation-container > div:nth-child(2) > div:nth-child(1){
+    flex-basis: 35%;
 }
 
 .navigation-container a {
@@ -67,16 +75,16 @@ body > section > div {
 
 .films-container > div {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 
 .films-container > div > a {
-    width: 24vw;
+    width: 24.23vw;
     aspect-ratio: 5/8;
 }
 
 .films-container > div:nth-child(1) > a {
-    width: 72vw;
+    /* width: 72vw; */
 }
 
 .films-container > div > a > img {
@@ -88,43 +96,44 @@ body > section > div {
 .articles-container {
     display: flex;
     margin-bottom: 1vh;
+    align-items: center;
 }
 
-.articles-container > .news {
+.news {
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    align-items: center;
 }
 
-.articles-container > .news > h1 {
-    font-size: 2em;
+.news > h1 {
+    font-size: 3em;
     margin-bottom: 1vh;
 }
 
-.articles-container > .news > div {
+.news > div {
     display: flex;
     flex-direction: column;
     gap: 1vh;
 }
 
-.articles-container > .news > div > div {
+.news > div > div {
     display: flex;
     flex-direction: row;
     gap: 1vw;
 }
 
-.articles-container > .news > div > div > div:nth-child(1) {
+.news > div > div > div:nth-child(1) {
     display: flex;
     flex-direction: column;
     width: 56%;
 }
 
-.articles-container > .news > div > div > div > h2 {
-    font-size: 1.2em;
+.news > div > div > div > h2 {
+    font-size: 2.2em;
     margin: 0;
 }
 
-.articles-container > .news > div > div > div > p {
+.news > div > div > div > p {
     margin-top: 0;
     font-family: Calibri;
 }
