@@ -28,7 +28,7 @@ div.images
     grid-gap 0.5%
     back(1)
     
-    @media (min-width: 650px)
+    @media (max-width: 650px) 
         grid-template-columns: repeat(1, 1fr);
         justify-items: center
         & img
@@ -44,7 +44,7 @@ article
     grid-template-columns repeat(3, 1fr)
     grid-gap 4%
 
-    @media (min-width: 650px)
+    @media (max-width: 650px) 
         grid-template-columns: repeat(1, 1fr);
         width 100%
 
