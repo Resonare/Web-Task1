@@ -1,70 +1,193 @@
-back(size)
-    background-color #f1f1f1
-    box-shadow 4px 5px 10px rgba(0, 0, 0, 0.4)
-    padding: size + "%"
-    margin 0 0 1% 0
+@font-face
+    font-family 'Graphik'
+    src url('fonts/graphik.ttf') format('truetype')
 
-colorText = #6f6d6d
-html
-    color colorText
+@font-face
+    font-family 'Roboto'
+    src url('fonts/roboto.ttf') format('truetype')
 
-nav
-    back(0)
-    text-align right
-    & a
-        display inline-block
-        padding 1%
-        color colorText
-        text-decoration: none
 
-        &:hover
-        &.active
-            background-color #f87777
-            color #f8f8f8 
 
-div.images
-    display grid
-    grid-template-columns repeat(5, 1fr)
-    grid-gap 0.5%
-    back(1)
-    
-    @media (max-width: 650px) 
-        grid-template-columns: repeat(1, 1fr);
-        justify-items: center
-        & img
-            width: 80% !important
+body
+    margin 0
+    background-color rgb(241, 241, 241)
 
-    & img
-        width: 100%
+h1, h2, a
+    font-family: Graphik
 
-article
-    width 80%
-    margin auto
-    display grid
-    grid-template-columns repeat(3, 1fr)
-    grid-gap 4%
+body > section > div
+    margin: 0 1vw
 
-    @media (max-width: 650px) 
-        grid-template-columns: repeat(1, 1fr);
-        width 100%
+.navigation-container
+    display: flex
+    flex-direction: column
+    margin: 0
+    margin-bottom: 2%
 
-    & section
-        display grid
-        grid-template-columns 1fr 2fr
-        grid-gap 2%
-        align-items center
-        back(2)
+.navigation-container > div:nth-child(1)
+    justify-content: space-around
+    background-color: black
 
-        & h3
-            grid-column 1/3
-            margin 0
-            text-align center
-        & img
-            width: 100%
+.navigation-container > div:nth-child(1) > div
+    width: 60%
 
-footer
-    background-color colorText
+.navigation-container > div:nth-child(1) > div > input
+    width: 95%
 
-    & h4
-        padding 5px
-        color #f8f8f8
+.navigation-container > div
+    display: flex
+    background-color: #141414
+    padding: 2vh 2vw
+
+.navigation-container > div:nth-child(2)
+    padding: 0
+
+.navigation-container > div:nth-child(2) > div
+    margin: 2vh 2vw
+
+.navigation-container > div:nth-child(2) > div:nth-child(1)
+    flex-basis: 13%
+
+    @media (max-width: 1000px)
+        display: none
+
+.navigation-container > div:nth-child(2) > div:nth-child(2)
+    display: flex
+    justify-content: center
+    gap: 4vw
+    flex-basis: 70%
+    align-items: center
+
+    @media (max-width: 1000px)
+        flex-basis: 100%
+        flex-wrap: wrap
+
+
+.navigation-container a
+    text-decoration: none
+    font-size: 1.15em
+    color: hsla(0, 0%, 100%, .415)
+
+.navigation-container > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
+    top: calc(20% + 10px)
+    background: black
+    color: hsla(0, 0%, 100%, .815)
+    position: relative
+    height: 120%
+    padding: 10px
+
+    @media (max-width: 1000px) 
+        top: 0
+        background: transparent
+        color: hsla(0, 0%, 100%, .815)
+        height: auto
+        padding: 0
+
+.navigation-container > div:nth-child(2) > a:nth-child(1)
+    color: white
+
+.navigation-container a.navigation-title
+    font-family: Roboto
+    font-size: 2.5em
+    color: white
+
+.films-container
+    display: flex
+
+.films-container > div
+    display: flex
+
+    @media (max-width: 1000px) 
+        flex-direction: column
+        flex-grow: 1
+        
+
+.films-container > div > a
+    width: 24.23vw
+    aspect-ratio: 5/8
+
+.films-container > div > a > img
+    width: 100%
+    height: 100%
+
+.articles-container
+    display: flex
+    margin-bottom: 1vh
+    align-items: center
+
+.news
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.news > h1
+    font-size: 3em
+    margin-bottom: 4vh
+
+.news > div
+    display: flex
+    flex-direction: column
+    gap: 5vh
+    align-items: center
+    margin-bottom: 2vh
+
+.news > div > div
+    display: flex
+    flex-direction: row
+    gap: 1vw
+    justify-content: center
+    width: 80%
+
+.news > div > div > div:nth-child(1)
+    display: flex
+    flex-direction: column
+    width: 56%
+
+.news > div > div > div:nth-child(1)
+    flex-basis: 84%
+
+.news > div > div > div:nth-child(2)
+    flex-basis: 16%
+
+.news > div > div > div:nth-child(2) > img
+    width: 100%
+
+.news > div > div:nth-child(2) > div:nth-child(2) > img
+    display: none
+
+.news > div > div:nth-child(3) > div:nth-child(1)
+    order: 2
+
+.news > div > div:nth-child(3) > div:nth-child(2)
+    order: 1
+
+.news > div > div > div > h2
+    font-size: 2.2em
+    margin: 0
+
+.news > div > div > div > p
+    margin-top: 0
+    font-family: Calibri
+    font-size: 1.2em
+
+.footer-container
+    display: flex
+    background-color: #141414
+    margin: 0
+    padding: 2vh 1vw
+    justify-content: space-between
+
+.footer-container > div > p
+    font-family: Calibri
+    color: hsla(0, 0%, 100%, .6)
+
+.films-container a
+    @media (max-width: 1000px)
+        aspect-ratio: auto !important
+        width: 100% !important
+
+.navigation-container > div:nth-child(2) > div:nth-child(2) > a
+    @media (max-width: 1000px)
+        display: flex
+        flex-basis: 47%
+        justify-content: center
