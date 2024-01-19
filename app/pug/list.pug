@@ -1,0 +1,691 @@
+doctype html
+html(lang="ru")
+head
+    meta(charset="UTF-8")
+    title Мои просмотренные
+    link(rel="stylesheet", href="css/main.css")
+body
+    section 
+        div.navigation-container
+            div
+                div
+                    a.navigation-title(href="index.html") КИНОПОИСК
+
+                div
+                    a(href="list.html") Мои просмотренные
+                    a(href="#") Фильмы
+                    a(href="#") Сериалы
+
+    details
+        summary График
+        form
+            table
+                tr
+                    th Значение по оси OX
+                    th Результат
+
+                tr
+                    td
+                        label Год
+                        input(type="radio" name="target" value="year") 
+                    td
+                        label Максимальный рейтинг
+                        input(type="checkbox"  name="result" value="max-rating") 
+
+                tr
+                    td 
+                        label Жанр
+                        input(type="radio"  name="target" value="genre") 
+                    td 
+                        label Минимальный рейтинг
+                        input(type="checkbox"  name="result" value="min-rating") 
+
+                tr
+                    td
+                        label Режиссёр
+                        input(type="radio"  name="target" value="director") 
+                    td
+                        label Количество фильмов
+                        input(type="checkbox"  name="result" value="quantity") 
+
+            input(type="submit" value="Построить")
+
+    details
+        summary Фильтр
+        form
+            p
+                label(for="title") Название:
+                input(type="text" name="title")
+
+            p
+                label(for="year") Год:
+                input(type="number" name="year" min="1900" max="2023")
+
+            p
+                label(for="genre") Жанр:
+                input(type="text" name="genre")
+
+            p
+                label(for="director") Режиссёр:
+                input(type="text" name="director")
+
+            p
+                label(for="time") Время:
+                input(type="text" name="time")
+
+            p
+                label(for="country") Страна:
+                input(type="text" name="country")
+
+            p
+                label(for="rating") Оценка:
+                input(type="number" name="rating" min="1" max="10")
+
+            p
+                input(type="submit" value="Найти")
+
+    details
+        summary Сортировка
+        form
+            p Первый уровень:
+                select(name="sort-first")
+                    option(value="no") Нет
+                    option(value="title") Название
+                    option(value="year") Год
+                    option(value="genre") Жанр
+                    option(value="director") Режиссёр
+                    option(value="country") Страна
+                    option(value="time") Время
+                    option(value="rating") Оценка
+                input(type="checkbox" name="reduction-first")
+
+            p Второй уровень:
+                select(name="sort-second")
+                    option(value="no") Нет
+                    option(value="title") Название
+                    option(value="year") Год
+                    option(value="genre") Жанр
+                    option(value="director") Режиссёр
+                    option(value="country") Страна
+                    option(value="time") Время
+                    option(value="rating") Оценка
+                input(type="checkbox" name="reduction-second")
+
+            p Третий уровень:
+                select(name="sort-third")
+                    option(value="no") Нет
+                    option(value="title") Название
+                    option(value="year") Год
+                    option(value="genre") Жанр
+                    option(value="director") Режиссёр
+                    option(value="country") Страна
+                    option(value="time") Время
+                    option(value="rating") Оценка
+                input(type="checkbox" name="reduction-third")
+
+            p
+                input(type="submit" value="Сортировать")
+
+    table(border="2" cellspacing="0" bordercolor="#808080")
+        tr(align="center")
+            th Название
+            th Год
+            th Жанр
+            th Режиссёр
+            th Время
+            th Страна
+            th Оценка
+        
+
+        tr
+            td Воспоминания об убийстве
+            td 2003
+            td детектив
+            td Пон Джун-хо
+            td 131
+            td Южная Корея
+            td(color="#3BB33B") 9
+            
+        
+        
+        tr
+            td Оппенгеймер
+            td 2023
+            td биография
+            td Кристофер Нолан
+            td 180
+            td США
+            td(color="#3BB33B") 10
+            
+        
+        
+        tr
+            td Список Шиндлера
+            td 1993
+            td драма
+            td Стивен Спилберг
+            td 195
+            td США
+            td(color="#3BB33B") 9
+            
+        
+        
+        tr
+            td Интерстеллар
+            td 2014
+            td фантастика
+            td Кристофер Нолан
+            td 169
+            td США
+            td(color="#3BB33B") 10
+            
+        
+        
+        tr
+            td Однажды в… Голливуде
+            td 2019
+            td драма
+            td Квентин Тарантино
+            td 161
+            td США
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Дюна
+            td 2021
+            td фантастика
+            td Дени Вильнёв
+            td 155
+            td США
+            td(color="#3BB33B") 10
+            
+        
+        
+        tr
+            td Луна 2112
+            td 2009
+            td фантастика
+            td Дункан Джонс
+            td 97
+            td Великобритания
+            td(color="#3BB33B") 7
+            
+        
+        
+        tr
+            td Одержимость
+            td 2013
+            td драма
+            td Дэмьен Шазелл
+            td 106
+            td США
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Грязь
+            td 2013
+            td драма
+            td Джон Бейрд
+            td 93
+            td Великобритания
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Гнев человеческий
+            td 2021
+            td боевик
+            td Гай Ричи
+            td 119
+            td Великобритания
+            td(color="#969696") 6
+            
+        
+        
+        tr
+            td Фотоувеличение
+            td 1966
+            td триллер
+            td Микеланджело Антониони
+            td 111
+            td Великобритания
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Прибытие
+            td 2016
+            td фантастика
+            td Дени Вильнёв
+            td 116
+            td США
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Схватка
+            td 1995
+            td боевик
+            td Майкл Манн
+            td 171
+            td США
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Дивергент
+            td 2014
+            td фантастика
+            td Нил Бёргер
+            td 134
+            td США
+            td(color="#e00000") 4
+            
+        
+        
+        tr
+            td Милые кости
+            td 2009
+            td драма
+            td Питер Джексон
+            td 135
+            td США
+            td(color="#969696") 6
+            
+        
+        
+        tr
+            td Война миров
+            td 2005
+            td фантастика
+            td Стивен Спилберг
+            td 116
+            td США
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Черное зеркало. Бандерснэтч
+            td 2018
+            td фантастика
+            td Дэвид Слэйд
+            td 90
+            td Великобритания
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Достучаться до небес
+            td 1997
+            td драма
+            td Томас Ян
+            td 87
+            td Германия
+            td(color="#3BB33B") 9
+            
+        
+        
+        tr
+            td Потец
+            td 1992
+            td мультфильм
+            td Александр Федулов
+            td 17
+            td Россия
+            td(color="#3BB33B") 9
+            
+        
+        
+        tr
+            td Манускрипт ниндзя
+            td 1993
+            td аниме
+            td Ёсиаки Кавадзири
+            td 91
+            td Япония
+            td(color="#3BB33B") 7
+            
+        
+        
+        tr
+            td Заражение
+            td 2011
+            td драма
+            td Стивен Содерберг
+            td 106
+            td США
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Никто
+            td 2021
+            td боевик
+            td Илья Найшуллер
+            td 92
+            td США
+            td(color="#969696") 6
+            
+        
+        
+        tr
+            td Любимый во Франксе
+            td 2018
+            td аниме
+            td Тосифуми Акаи
+            td 24
+            td Япония
+            td(color="#e00000") 4
+            
+        
+        
+        tr
+            td Боец
+            td 2010
+            td драма
+            td Дэвид Расселл
+            td 114
+            td США
+            td(color="#3BB33B") 9
+            
+        
+        
+        tr
+            td Чебурашка
+            td 2022
+            td семейный
+            td Дмитрий Дьяченко
+            td 113
+            td Россия
+            td(color="#e00000") 4
+            
+        
+        
+        tr
+            td Бэтмен
+            td 2022
+            td детектив
+            td Мэтт Ривз
+            td 176
+            td США
+            td(color="#969696") 6
+            
+        
+        
+        tr
+            td Дом Дракона
+            td 2022
+            td фэнтези
+            td Клер Килнер
+            td 60
+            td США
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Моб Психо 100
+            td 2016
+            td аниме
+            td Юдзуру Татикава
+            td 24
+            td Япония
+            td(color="#3BB33B") 7
+            
+        
+        
+        tr
+            td Я видел дьявола
+            td 2010
+            td триллер
+            td Ким Джи-ун
+            td 144
+            td Южная Корея
+            td(color="#969696") 6
+            
+        
+        
+        tr
+            td Пленницы
+            td 2013
+            td триллер
+            td Дени Вильнёв
+            td 153
+            td США
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Хорошее время
+            td 2017
+            td триллер
+            td Бенни Сэфди
+            td 102
+            td США
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Россия 1985-1999: TraumaZone
+            td 2022
+            td документальный
+            td Адам Кертис
+            td 60
+            td Великобритания
+            td(color="#3BB33B") 10
+            
+        
+        
+        tr
+            td Мастера меча онлайн
+            td 2012
+            td аниме
+            td Томохико Ито
+            td 25
+            td Япония
+            td(color="#e00000") 4
+            
+        
+        
+        tr
+            td Тайная жизнь домашних животных
+            td 2016
+            td мультфильм
+            td Крис Рено
+            td 87
+            td США
+            td(color="#969696") 5
+            
+        
+        
+        tr
+            td Воронины
+            td 2009
+            td комедия
+            td Александр Жигалкин
+            td 24
+            td Россия
+            td(color="#e00000") 4
+            
+        
+        
+        tr
+            td Рагнарёк
+            td 2020
+            td фэнтези
+            td Могенс Кристиансен
+            td 45
+            td Дания
+            td(color="#969696") 6
+            
+        
+        
+        tr
+            td Пинг-понг
+            td 2014
+            td аниме
+            td Масааки Юаса
+            td 25
+            td Япония
+            td(color="#3BB33B") 9
+            
+        
+        
+        tr
+            td Капитан Волконогов бежал
+            td 2021
+            td триллер
+            td Наташа Меркулова
+            td 126
+            td Россия
+            td(color="#3BB33B") 10
+            
+        
+        
+        tr
+            td Джанго освобожденный
+            td 2012
+            td вестерн
+            td Квентин Тарантино
+            td 165
+            td США
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Прислуга
+            td 2011
+            td драма
+            td Тейт Тейлор
+            td 146
+            td США
+            td(color="#969696") 6
+            
+        
+        
+        tr
+            td Тьма
+            td 2017
+            td фантастика
+            td Баран бо Одар
+            td 60
+            td Германия
+            td(color="#3BB33B") 10
+            
+        
+        
+        tr
+            td Преследователь
+            td 2008
+            td триллер
+            td На Хон-джин
+            td 120
+            td Южная Корея
+            td(color="#3BB33B") 10
+            
+        
+        
+        tr
+            td Пылающий
+            td 2018
+            td детектив
+            td Ли Чхан-дон
+            td 148
+            td Южная Корея
+            td(color="#3BB33B") 10
+            
+        
+        
+        tr
+            td Криминальное чтиво
+            td 1994
+            td криминал
+            td Квентин Тарантино
+            td 154
+            td США
+            td(color="#3BB33B") 8
+            
+        
+        
+        tr
+            td Могучие рейнджеры
+            td 2017
+            td фантастика
+            td Дин Израэлайт
+            td 124
+            td США
+            td(color="#e00000") 3
+            
+        
+        
+        tr
+            td Экипаж
+            td 2016
+            td драма
+            td Николай Лебедев
+            td 138
+            td Россия
+            td(color="#969696") 6
+            
+        
+        
+        tr
+            td Отряд самоубийц
+            td 2016
+            td боевик
+            td Дэвид Эйр
+            td 118
+            td США
+            td(color="#969696") 5
+            
+        
+        
+        tr
+            td Брат 2
+            td 2000
+            td боевик
+            td Алексей Балабанов
+            td 127
+            td Россия
+            td(color="#969696") 6
+            
+        
+        
+        tr
+            td Шан-Чи и легенда десяти колец
+            td 2021
+            td фэнтези
+            td Дестин Дэниел Креттон
+            td 132
+            td США
+            td(color="#969696") 5
+            
+        
+        
+        tr
+            td Джокер
+            td 2019
+            td драма
+            td Тодд Филлипс
+            td 122
+            td США
+            td(color="#3BB33B") 8
+            
+        
+    </table>
+</body>
+</html>
