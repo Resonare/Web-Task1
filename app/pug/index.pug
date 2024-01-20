@@ -1,6 +1,16 @@
 block variables
     - var title = 'Кинопоиск'
 
+mixin createFilmList
+    a(href="film.html")
+        img(src="../img/posters/dune_poster.png", alt="") 
+    a(href="#")
+        img(src="../img/posters/burning_poster.png", alt="") 
+    a(href="#")
+        img(src="../img/posters/volkonogov_poster.png", alt="") 
+    a(href="#")
+        img(src="../img/posters/chaser_poster.png", alt="") 
+
 doctype html
 html(lang="ru")
     head
@@ -21,14 +31,7 @@ html(lang="ru")
         section 
             div.films-container
                 div
-                    a(href="film.html")
-                        img(src="../img/posters/dune_poster.png", alt="") 
-                    a(href="#")
-                        img(src="../img/posters/burning_poster.png", alt="") 
-                    a(href="#")
-                        img(src="../img/posters/volkonogov_poster.png", alt="") 
-                    a(href="#")
-                        img(src="../img/posters/chaser_poster.png", alt="") 
+                    +createFilmList
 
         section
             div.articles-container
