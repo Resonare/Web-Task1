@@ -55,6 +55,10 @@ body > section > div
     text-decoration: none
     font-size: 1.15em
     color: hsla(0, 0%, 100%, .415)
+    transition: color 0.5s
+
+.navigation-container a:hover
+    color: white
 
 .navigation-container > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)
     top: calc(20% + 10px)
@@ -103,6 +107,10 @@ body > section > div
     margin-bottom: 1vh
     align-items: flex-start
 
+    @media (max-width: 1000px) 
+        flex-direction: column
+        flex-grow: 1
+
 .articles-container > .most-profitable-container
     display: inline-block
     width: 65vw
@@ -143,14 +151,32 @@ body > section > div
 .most-profitable-container
     width: 40%
 
+    @media (max-width: 1000px) 
+        width: 100% !important
+
+.most-profitable-container > div
+    @media (max-width: 1000px) 
+        width: 100% !important
+        flex-direction: column;
+        gap: 2vh
+
+.most-profitable-container > div > div
+    @media (max-width: 1000px) 
+        width: 100% !important
+
 .most-profitable-container img
     width: 400px
+    @media (max-width: 1000px) 
+        width: 100% !important
 
 .news
     width: 40%
     display: flex
     flex-direction: column
     align-items: center
+
+    @media (max-width: 1000px) 
+        width: 100% !important
 
 .news > h1
     font-size: 3em
@@ -184,7 +210,6 @@ body > section > div
     width: 154px
 
 .news > div > div > div > h2
-    font-size: 2.2em
     margin: 0
 
 .news > div > div > div > p
@@ -208,6 +233,12 @@ body > section > div
         aspect-ratio: auto !important
         width: 100% !important
 
+.films-container img
+    transition: transform 0.5s
+
+.films-container img:hover 
+    transform: scale(1.1)
+
 .navigation-container > div:nth-child(2) > div:nth-child(2) > a
     @media (max-width: 1000px)
         display: flex
@@ -217,7 +248,6 @@ body > section > div
 .film-info
     background: white
     width: 54%;
-    height: 70vh;
     margin: auto;
     padding: 2vw 2vw
     display: flex
@@ -225,15 +255,60 @@ body > section > div
 
 .film-info > div:nth-child(2)
     display: flex
+    flex-direction: column
 
 .film-info p
     font-family: Calibri
+    margin-top: 0.6vh
 
 .film-info li
     font-family: Calibri
+    margin-bottom: 0.3vh
+
+.film-info h1 img
+    margin-left: 1vw
 
 .film-info h3
     font-family: Graphik
+    margin-bottom: 0
 
 .film-info ul
     padding: 0
+    margin-top: 0.6vh
+
+.my-list
+    margin-top: 2vh
+    border: 0
+    border-collapse: collapse;
+
+.my-list th
+    padding: 2.2vh 2vw
+    font-family: Calibri
+    font-size: 1.2em
+    border: 0
+    border-bottom: 1px solid #a0a0a0
+    text-transform: uppercase
+    text-align: left
+
+.my-list td
+    padding: 1.8vh 2vw
+    color: rgb(130, 130, 130)
+    font-family: Graphik
+    font-size: 0.92em
+    border: 0
+    border-bottom: 1px solid #a0a0a0;
+
+details > summary
+    font-family: Calibri
+    font-weight: 1000
+    font-size: 1.2em
+    margin-left: 0.5vw
+    text-transform: uppercase
+
+.green-text
+    color: rgb(0, 154, 0) !important
+
+.red-text
+    color: red !important
+
+
